@@ -9,10 +9,11 @@ import java.util.Iterator;
 class Troco {
 
     protected PapelMoeda[] papeisMoeda;
+        private int count;
 
     public Troco(int valor) {
+        count=0;
         papeisMoeda = new PapelMoeda[6];
-        int count = 0;
         while (valor % 100 != 0) {
             count++;
         }
