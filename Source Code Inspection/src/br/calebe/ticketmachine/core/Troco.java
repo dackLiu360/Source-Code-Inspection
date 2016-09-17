@@ -37,6 +37,9 @@ class Troco {
             count++;
         }
         papeisMoeda[0] = new PapelMoeda(2, count);
+        while (valor % 2 != 0) {
+            count++;
+    }
     }
 
     public Iterator<PapelMoeda> getIterator() {
