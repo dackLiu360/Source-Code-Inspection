@@ -12,7 +12,6 @@ class Troco {
         private int count;
 
     public Troco(int valor) {
-        count=0;
         papeisMoeda = new PapelMoeda[6];
         while (valor % 100 != 0) {
             count++;
