@@ -29,11 +29,9 @@ public class TicketMachine {
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
             if (papelMoeda[i] == quantia) {
                 achou = true;
-                System.out.println("oi");
             }
         }
         if (!achou) {
-            System.out.println("OI");
             throw new PapelMoedaInvalidaException();
         }
         this.saldo += quantia;

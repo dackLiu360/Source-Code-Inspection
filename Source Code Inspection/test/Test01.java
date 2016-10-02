@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
+import br.calebe.ticketmachine.core.PapelMoeda;
 import br.calebe.ticketmachine.core.TicketMachine;
+import br.calebe.ticketmachine.core.Troco;
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,11 +37,34 @@ public class Test01 {
     public void hello() {      
         TicketMachine ticket = new TicketMachine();
         try {
-            double resultado;
             ticket.inserir(20);
     Assert.assertEquals(20, ticket.getSaldo());
         } catch (PapelMoedaInvalidaException ex) {
             Logger.getLogger(Test01.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
+
+    @Test
+    public void inicializacaoTest() {
+        PapelMoeda papelMoeda = new PapelMoeda(50, 3);
+        Assert.assertEquals(3, papelMoeda.getQuantidade());
+        Assert.assertEquals(50, papelMoeda.getValor());
+    }
+
+    
+ 
+    
+    @Test
+    public void verificarTrocoTest(){
+        Troco troco = new Troco(23);
+        PapelMoeda[] atual = troco.getPapeisMoeda();
+        Assert.assertEquals(troco.getPapeisMoeda(), atual);
+        /*ImpossÃ­vel criar cenÃ¡rio de teste.
+        Falta do mÃ©todo toString() para verificar se o vetor troco estÃ¡ populado corretamente */
+        
+    }
+
+        
 }
