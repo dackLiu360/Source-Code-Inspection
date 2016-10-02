@@ -61,9 +61,6 @@ public class Test01 {
         Troco troco = new Troco(23);
         PapelMoeda[] atual = troco.getPapeisMoeda();
         Assert.assertEquals(troco.getPapeisMoeda(), atual);
-        /*ImpossÃ­vel criar cenÃ¡rio de teste.
-        Falta do mÃ©todo toString() para verificar se o vetor troco estÃ¡ populado corretamente */
-        
     }
 
         
